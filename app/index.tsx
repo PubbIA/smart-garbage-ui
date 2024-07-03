@@ -1,16 +1,22 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+// import Login from '@/components/login';
+import { Link } from 'expo-router';
+import { View, Text, StyleSheet ,SafeAreaView } from 'react-native';
+ 
 
-export default function index() {
+export default function HomeScreen() {
   return (
-    <View 
-    style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-        }}
-    >
-      <Text>index</Text>
-    </View>
-  )
+     
+        <View style={styles.container}>
+            <Text>Home</Text>
+            {/* <Login /> */}
+        </View>
+   
+  );
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
