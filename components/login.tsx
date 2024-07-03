@@ -46,7 +46,7 @@ export default function LandingPage() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "#f0f8ff", // Fallback color
+    backgroundColor: "#00000", // Fallback color
   },
   container: {
     flex: 1,
