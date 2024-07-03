@@ -1,14 +1,13 @@
 // import Login from '@/components/login';
 import { Link } from 'expo-router';
 import { View, Text, StyleSheet ,SafeAreaView } from 'react-native';
- 
-
+import Login from '@/components/login';
 export default function HomeScreen() {
   return (
      
         <View style={styles.container}>
             <Text>Home</Text>
-            {/* <Login /> */}
+            <Login />
         </View>
    
   );
