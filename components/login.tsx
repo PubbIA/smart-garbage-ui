@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: "outfit-Bold",
     fontSize: 32,
-    color: "#2c3e50",
+    color: "#004aad",
     marginTop: 20,
   },
   subtitle: {

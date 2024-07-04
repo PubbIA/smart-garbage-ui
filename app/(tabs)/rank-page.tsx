@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#2c3e50',
+    color: '#004aad',
     marginBottom: 10,
     textAlign: 'center',
   },
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   rankPosition: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#2c3e50',
+    color: '#004aad',
   },
   rankName: {
     fontSize: 18,
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
   },
   currentRank: {
     fontSize: 16,
-    color: '#2c3e50',
+    color: '#004aad',
     textAlign: 'center',
     marginTop: 10,
   },

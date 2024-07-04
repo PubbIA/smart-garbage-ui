@@ -60,13 +60,13 @@ const styles = StyleSheet.create({
   dash: {
     flex: 1,
     height: 1,
-    backgroundColor: '#2c3e50',
+    backgroundColor: '#004aad',
     marginHorizontal: 10,
   },
   pointsText: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: '#2c3e50',
+    color: '#004aad',
   },
   offerContainer: {
     flexDirection: 'row',

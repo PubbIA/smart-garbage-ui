@@ -5,7 +5,7 @@ import MapView, { Marker } from 'react-native-maps';
 export default function MapPage() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Map Page</Text>
+     
       <View style={styles.mapContainer}>
         <MapView
           style={styles.map}
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginVertical: 20,
-    color: '#2c3e50',
+    color: '#004aad',
   },
   mapContainer: {
     width: '90%',
@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
     borderColor: '#dcdcdc',
     borderRadius: 10,
     overflow: 'hidden',
+    marginTop: -90,
   },
   map: {
     ...StyleSheet.absoluteFillObject,

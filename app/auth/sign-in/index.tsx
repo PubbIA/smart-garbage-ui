@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: 'outfit-Bold',
     fontSize: 28,
-    color: '#2c3e50',
+    color: '#004aad',
     marginBottom: 10,
   },
   subtitle: {
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   button: {
-    backgroundColor: '#3498db',
+    backgroundColor: '#004aad',
     paddingVertical: 15,
     paddingHorizontal: 40,
     borderRadius: 30,
@@ -117,6 +117,6 @@ const styles = StyleSheet.create({
   signUpText: {
     fontFamily: 'outfit-Medium',
     fontSize: 16,
-    color: '#3498db',
+    color: '#004aad',
   },
 });
