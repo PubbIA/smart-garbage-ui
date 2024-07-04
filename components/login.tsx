@@ -54,18 +54,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   logoContainer: {
-    marginTop: 50,
+   
     alignItems: "center",
   },
   logo: {
-    width: 200,
-    height: 200,
-    marginTop: -100,
+    width: 400,
+    height: 400,
+    marginTop: -200,
   },
   content: {
     alignItems: "center",
     marginHorizontal: 20,
-    marginTop: 30,
+    marginTop: -90,
   },
   title: {
     fontFamily: "outfit-Bold",
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   button: {
-    backgroundColor: "#3498db",
+    backgroundColor: "#004aad",
     paddingVertical: 15,
     paddingHorizontal: 40,
     borderRadius: 30,
