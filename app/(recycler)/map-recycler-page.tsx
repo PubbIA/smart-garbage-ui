@@ -6,6 +6,7 @@ export default function MapPage() {
   return (
     <View style={styles.container}>
      
+     
       <View style={styles.mapContainer}>
         <Text>Helo</Text>
         <MapView

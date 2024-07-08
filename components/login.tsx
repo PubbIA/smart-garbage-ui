@@ -46,7 +46,7 @@ export default function LandingPage() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "#00000", // Fallback color
+    backgroundColor: "#f0f8ff", // Fallback color
   },
   container: {
     flex: 1,
@@ -54,28 +54,28 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   logoContainer: {
-   
+    marginTop: 50,
     alignItems: "center",
   },
   logo: {
-    width: 400,
-    height: 400,
-    marginTop: -200,
+    width: 350,
+    height: 150,
+    marginTop: -100,
   },
   content: {
     alignItems: "center",
     marginHorizontal: 20,
-    marginTop: -90,
+    marginTop: 30,
   },
   title: {
     fontFamily: "outfit-Bold",
-    fontSize: 32,
-    color: "#004aad",
+    fontSize: 36,
+    color: "#2c3e50",
     marginTop: 20,
   },
   subtitle: {
     fontFamily: "outfit-Medium",
-    fontSize: 20,
+    fontSize: 23,
     color: "#34495e",
     textAlign: "center",
     marginVertical: 10,

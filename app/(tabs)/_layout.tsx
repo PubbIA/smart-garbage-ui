@@ -25,7 +25,7 @@ const TabLayout = () => {
       screenOptions={{
         headerShown: true, // Display header
         headerTitle: () => (
-          <Text style={styles.pointsText}>Points: {userPoints}</Text>
+          <Text style={styles.pointsText}>Points: {global.user.points}</Text>
         ), // Display user points
         headerRight: () => (
           <View style={styles.headerRight}>

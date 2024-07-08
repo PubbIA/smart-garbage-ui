@@ -1,22 +1,31 @@
 import { View, Text, StyleSheet, FlatList } from 'react-native';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function PointPage() {
-  const userPoints = 120; // Example user points
+  const [userPoints, setUserPoints] = useState(global.user.points); // Example user points
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setUserPoints(global.user.points);
+    }, 1000); // Check for changes every second
+
+    return () => clearInterval(interval); // Cleanup the interval on component unmount
+  }, []);
+
   const offers = [
-      { id: '2', name: 'Balade en Jet Ski', points: 100 },
-      { id: '3', name: 'Pack cosmétique', points: 75 },
-      { id: '4', name: 'Location de parasol de plage', points: 20 },
-      { id: '5', name: 'Équipement de snorkeling', points: 60 },
-      { id: '6', name: 'Volleyball de plage gratuit', points: 30 },
-      { id: '7', name: 'Football gratuit', points: 25 },
-      { id: '8', name: 'Tennis Paddle gratuit', points: 40 },
-      { id: '9', name: 'Crème solaire', points: 15 },
-      { id: '10', name: 'Casquette', points: 10 },
-      { id: '11', name: 'Bracelet recyclé', points: 5 },
-      { id: '12', name: 'Jeux divers', points: 20 },
-      { id: '1', name: 'Accès au événement de music ', points: 50 },
+    { id: '2', name: 'Balade en Jet Ski', points: 100 },
+    { id: '3', name: 'Pack cosmétique', points: 75 },
+    { id: '4', name: 'Location de parasol de plage', points: 20 },
+    { id: '5', name: 'Équipement de snorkeling', points: 60 },
+    { id: '6', name: 'Volleyball de plage gratuit', points: 30 },
+    { id: '7', name: 'Football gratuit', points: 25 },
+    { id: '8', name: 'Tennis Paddle gratuit', points: 40 },
+    { id: '9', name: 'Crème solaire', points: 15 },
+    { id: '10', name: 'Casquette', points: 10 },
+    { id: '11', name: 'Bracelet recyclé', points: 5 },
+    { id: '12', name: 'Jeux divers', points: 20 },
+    { id: '1', name: 'Accès au événement de music ', points: 50 },
     // Add more offers as needed
   ];
 

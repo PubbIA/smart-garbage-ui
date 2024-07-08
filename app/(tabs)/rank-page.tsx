@@ -1,57 +1,30 @@
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import { View, Text, StyleSheet, FlatList, Image } from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const nationalRank = [
-  { id: '1', name: 'User1', points: 150 },
-  { id: '2', name: 'vous', points: 120 },
-  { id: '3', name: 'User3', points: 100 },
+const globalRank = [
+  { id: '1', name: 'Oail laamiri ', points: 150, avatar: 'https://example.com/user1-avatar.jpg' },
+  { id: '2', name: 'vous', points: 120, avatar: 'https://example.com/current-user-avatar.jpg' },
+  { id: '3', name: 'Ismail oukha', points: 100, avatar: 'https://example.com/user3-avatar.jpg' },
 ];
-
-const regionalRank = [
-  { id: '1', name: 'vous', points: 120 },
-  { id: '2', name: 'User2', points: 110 },
-  { id: '3', name: 'User3', points: 90 },
-];
-
-const currentUser = { id: '2', name: 'Current User', points: 120 };
 
 export default function RankPage() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.rankSection}>
-        <Text style={styles.sectionTitle}>Classement National</Text>
+        <Text style={styles.sectionTitle}>Classement Global</Text>
         <FlatList
-          data={nationalRank}
+          data={globalRank}
           keyExtractor={(item) => item.id}
           renderItem={({ item, index }) => (
             <View style={styles.rankItem}>
               <Text style={styles.rankPosition}>{index + 1}.</Text>
+              <Image source={{ uri: item.avatar }} style={styles.avatar} />
               <Text style={styles.rankName}>{item.name}</Text>
               <Text style={styles.rankPoints}>{item.points} Points</Text>
             </View>
           )}
         />
-        <Text style={styles.currentRank}>
-          Votre place: 2ème avec {currentUser.points} Points
-        </Text>
-      </View>
-      <View style={styles.rankSection}>
-        <Text style={styles.sectionTitle}>Classement Régional</Text>
-        <FlatList
-          data={regionalRank}
-          keyExtractor={(item) => item.id}
-          renderItem={({ item, index }) => (
-            <View style={styles.rankItem}>
-              <Text style={styles.rankPosition}>{index + 1}.</Text>
-              <Text style={styles.rankName}>{item.name}</Text>
-              <Text style={styles.rankPoints}>{item.points} Points</Text>
-            </View>
-          )}
-        />
-        <Text style={styles.currentRank}>
-          Votre place: 1er avec {currentUser.points} Points
-        </Text>
       </View>
     </SafeAreaView>
   );
@@ -92,6 +65,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#004aad',
   },
+  avatar: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    marginRight: 10,
+  },
   rankName: {
     fontSize: 18,
     color: '#34495e',
@@ -99,11 +78,5 @@ const styles = StyleSheet.create({
   rankPoints: {
     fontSize: 16,
     color: '#e74c3c',
-  },
-  currentRank: {
-    fontSize: 16,
-    color: '#004aad',
-    textAlign: 'center',
-    marginTop: 10,
   },
 });

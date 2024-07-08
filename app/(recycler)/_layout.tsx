@@ -27,10 +27,17 @@ export default function RecyclerTabLayout() {
         name="map-recycler-page"
  
         options={{
-          title: 'Map for Recycler',
+          title: 'Home',
           drawerIcon: () => <Ionicons name="map" size={24} color="#3498db" />,
         }}
       />
+      <Drawer.Screen
+      name = 'nearby-garbage'
+        options={{
+            title: 'Nearby Garbage',
+            drawerIcon: () => <Ionicons name="map" size={24} color="#3498db" />,
+        }}
+        />
     </Drawer>
   );
 }

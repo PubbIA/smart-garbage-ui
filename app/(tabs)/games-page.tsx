@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import React, { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -30,6 +30,8 @@ const questions = [
   },
 ];
 
+// Global variable to simulate user points
+ 
 export default function GamePage() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -45,6 +47,20 @@ export default function GamePage() {
       setCurrentQuestion(nextQuestion);
     } else {
       setShowScore(true);
+      // Check if user has answered 2 out of 3 questions correctly
+      if (score >= 2) {
+        // Add 10 points to global user points
+        global.user.points += 10;
+        
+        // Show an alert for points update
+        Alert.alert(
+          "Points Earned!",
+          `Vous avez gagné 10 points. Total points: ${global.user.points}`,
+          [
+            { text: "OK", onPress: () => console.log("OK Pressed") }
+          ]
+        );
+      }
     }
   };
 
@@ -57,6 +73,12 @@ export default function GamePage() {
           </Text>
         ) : (
           <>
+          {score >= 2 && (
+            <Text style={styles.scoreText}>
+                Félicitations! Vous avez gagné 10 points!
+            </Text>
+            )}
+
             <Text style={styles.questionText}>
               {questions[currentQuestion].question}
             </Text>
